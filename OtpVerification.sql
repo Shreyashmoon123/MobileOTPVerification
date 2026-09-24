@@ -1,0 +1,5 @@
+SELECT *
+FROM   otps;
+
+SELECT COUNT(*)
+FROM   Otps;

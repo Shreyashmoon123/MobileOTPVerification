@@ -1,0 +1,48 @@
+@{
+    ViewData["Title"] = "Mobile OTP Verification";
+}
+
+<h2>Mobile OTP Verification</h2>
+
+<!-- Send OTP -->
+<h3>Send OTP</h3>
+
+<form asp-controller="Otp" asp-action="SendOtp" method="post">
+
+    <div>
+        <label>Mobile Number</label>
+        <input type="text" name="mobileNumber" placeholder="+916393220245" required />
+    </div>
+
+    <br />
+
+    <button type="submit">Send OTP</button>
+
+</form>
+
+
+<hr />
+
+
+<!-- Verify OTP -->
+<h3>Verify OTP</h3>
+
+<form asp-controller="Otp" asp-action="VerifyOtp" method="post">
+
+    <div>
+        <label>Mobile Number</label>
+        <input type="text" name="mobileNumber" placeholder="+916393220245" required />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Enter OTP</label>
+        <input type="text" name="otpCode" placeholder="Enter 6 digit OTP" required />
+    </div>
+
+    <br />
+
+    <button type="submit">Verify OTP</button>
+
+</form>
